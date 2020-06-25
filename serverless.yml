@@ -8,4 +8,18 @@ provider:
 functions:
   hello:
     handler: handler.hello
-    
+  getAll:
+    handler: handler.getAll 
+    events:
+      - http:
+          path: characters
+          method: get
+          cors: true
+
+  create:
+    handler: handler.create # point to exported create function in handler.js
+    events:
+      - http:
+          path: character # path will be domain.name.com/dev/notes
+          method: post
+          cors: true
