@@ -2,7 +2,6 @@
 
 const connectToDatabase = require("./db");
 const Character = require("./models/character.js");
-const character = require("./models/character.js");
 require("dotenv").config({ path: "./.env" });
 
 module.exports.hello = async (event) => {
